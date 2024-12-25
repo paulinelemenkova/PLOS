@@ -147,8 +147,6 @@
 \renewcommand{\@biblabel}[1]{\quad#1.}
 \makeatother
 
-
-
 % Header and Footer with logo
 \usepackage{lastpage,fancyhdr,graphicx}
 \usepackage{epstopdf}
@@ -159,6 +157,9 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{booktabs} % To thicken table lines
+\usepackage{multirow}
+\usepackage{changepage}
+%\usepackage{chngpage}
 
 %\pagestyle{myheadings}
 \pagestyle{fancy}
@@ -348,7 +349,36 @@ The average monthly precipitation, represented as a monthly sum and maximum dail
 \label{fig02}
 \end{figure}
 
-Long term fog data were not available directly at the study site. Therefore, the data obtained from the webcam photos for the years 2015 and 2019 (more details in Table 2) are valuable. From January until August of 2015, the total fog frequency was 296.5 h during 72 days with fog and 37 days with mixed precipitation (109 days; 30\% of days were foggy and 15\% had mixed precipitation). In 2019, days with fog were frequent but there were few days with fog-only (frequent in 2015); instead, the fog was often present during days with precipitation (we counted these as days with mixed precipitation). Fog occurred for 241 h during 9 days with fog (5\%) and 45 days with mixed precipitation (27\%) within a measuring period of 167 days (from late spring to autumn of 2019). 
+Long term fog data were not available directly at the study site. Therefore, the data obtained from the webcam photos for the years 2015 and 2019 (more details in Table \ref{tab02}) are valuable. From January until August of 2015, the total fog frequency was 296.5 h during 72 days with fog and 37 days with mixed precipitation (109 days; 30\% of days were foggy and 15\% had mixed precipitation). In 2019, days with fog were frequent but there were few days with fog-only (frequent in 2015); instead, the fog was often present during days with precipitation (we counted these as days with mixed precipitation). Fog occurred for 241 h during 9 days with fog (5\%) and 45 days with mixed precipitation (27\%) within a measuring period of 167 days (from late spring to autumn of 2019). 
+
+\begin{table}[!h]
+\caption{Days with dry conditions, fog and precipitation (rain- or snowfall) and mixed precipitation of fog plus rain-or snowfall for the whole observed period in 2015 and 2019 and the common period observed in both years.}
+\label{tab02}
+   \centering
+%\setlength\tabcolsep{0pt}
+%\begin{tabularx}{\textwidth}{ p{3.8cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm}}
+\setlength\tabcolsep{0pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} ccccccccc }
+\toprule
+\bf{year} & \multicolumn{2}{c}{2015 all} & \multicolumn{2}{c}{2015 common period} & \multicolumn{2}{c}{2019 all} & \multicolumn{2}{c}{2019 common period} \\
+\midrule
+\bf{measuring period} & \multicolumn{2}{c}{1.1--30.8.2015} & \multicolumn{2}{c}{25.5--30.8.2015} & \multicolumn{2}{c}{25.5--7.11.2019} & \multicolumn{2}{c}{25.5--30.8.2019} \\
+\midrule
+\bf{time observed} & \multicolumn{2}{c}{9-17} & \multicolumn{2}{c}{9-17} & \multicolumn{2}{c}{0-24} & \multicolumn{2}{c}{0-24} \\
+\midrule
+& \textbf{days} & \textbf{\%} & \textbf{days} & \textbf{\%} & \textbf{days} & \textbf{\%} & \textbf{days} & \textbf{\%} \\
+\midrule
+	dry & 123 & 50.6 & 40 & 41.2 & 79 & 47.3 & 46 & 47.4 \\
+	fog & 72 & 29.6 & 31 & 32.0 & 9 & 5.4 & 2 & 2.1 \\
+	rain/snow & 11 & 4.5 & 6 & 6.2 & 34 & 20.4 & 31 & 32.0 \\
+	mixed precipitation & 37 & 15.2 & 20 & 20.6 & 45 & 26.9 & 18 & 18.6 \\
+	\midrule
+	total & 243 & 100 & 97 & 100 & 167 & 100 & 97 & 100 \\
+\bottomrule
+\end{tabular*}
+%\end{tabularx}
+% \end{adjustwidth}
+\end{table} 
 
 These results highlight the importance of days having both fog and rainfall (mixed precipitation). \cite{wagner2015} recorded observations over 254 days with cloudy conditions (70\%) in 2011 in South Tyrol but did not obtain any fog or mixed precipitation data. If we consider our data from 2019, days with fog (defined as days with fog and days with mixed precipitation) may account for 45\% of cloudy days in 2011 as measured by \cite{wagner2015}. 
 
@@ -406,7 +436,7 @@ By looking at the same water components, split into approximately monthly period
 
 \begin{table}[h!]
 \caption{Estimated fog contribution to throughfall in mixed precipitation events in the young and old forest stand (mean ± standard deviation for absolute amounts). Fog contribution was estimated daily for all single throughfall gauges and negative estimations were set to zero, thus the sum of estimated fog and rain contribution was higher than measured throughfall}
-\label{tab04}
+\label{tab05}
 \setlength\tabcolsep{0pt}
 \begin{tabularx}{\textwidth}{ p{7cm} p{4cm} p{4cm} }
 \toprule
@@ -416,7 +446,6 @@ By looking at the same water components, split into approximately monthly period
 	Total Tf measured (mm) &  292 ± 26 & 216 ± 11 \\
 	Tf estimated from rain only events (mm) & 243 ± 7 & 184 ± 8 \\
 	Fog contribution in mixed events (mm) & 70 ± 15 & 53 ± 5 \\
-	
 	Measured Tf/P (\%) & 64 & 47 \\
 	Estimated rain-only Tf/P (\%) & 53 & 40 \\
 	Estimated fog Tf/P (\%) & 15 & 12 \\
