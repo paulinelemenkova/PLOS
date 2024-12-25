@@ -159,6 +159,8 @@
 \usepackage{booktabs} % To thicken table lines
 \usepackage{multirow}
 \usepackage{changepage}
+\usepackage{pdflscape}
+\usepackage{makecell}
 %\usepackage{chngpage}
 
 %\pagestyle{myheadings}
@@ -294,7 +296,37 @@ The evapotranspiration was assessed by the eddy covariance technique. The measur
 
 Air samples were taken through an insulated steel tube of 4 mm in internal diameter and 0.75 m in length at 0.15 m from the anemometer. The airflow rate was set to 12 L min− 1, as provided by the flow module (7200–101, Li-Cor). All the setups followed the ICOS methodology (Rebmann et al., 2018). Raw values of CO2 and H2O concentration and 3D wind speed components were measured at 20 Hz and the resulting fluxes were computed and logged by a personal computer every 30 min. and elaborated with Eddypro software (version 6.2.1, LiCor). 
 
-Based on the energy balance ratio (EBR) values computed monthly (Wohlfahrt et al., 2009), we estimated the systematic errors in the eddy covariance measurements for LE+H at the Renon site to be 17.6\%. Given a Bowen ratio of approximately 1 in the summer, this error can be assumed to be half of this value in LE (8.8\%; Table 1) and, therefore also in ET (Table 1). The random error of EC and the other components of the water balance are shown in Figure 8.
+Based on the energy balance ratio (EBR) values computed monthly (Wohlfahrt et al., 2009), we estimated the systematic errors in the eddy covariance measurements for LE+H at the Renon site to be 17.6\%. Given a Bowen ratio of approximately 1 in the summer, this error can be assumed to be half of this value in LE (8.8\%; Table \ref{tab01}) and, therefore also in ET (Table \ref{tab01}). The random error of EC and the other components of the water balance are shown in Figure 8.
+
+\begin{landscape}
+\begin{table}[!h]
+\caption{Technical description and accuracy of the instrumentation used to calculate the water balance}
+\label{tab01}
+   \centering
+\setlength\tabcolsep{0pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} cccccc }
+\toprule
+\bf{Description} & \bf{\makecell[l]{Height above \\ ground (m)}} & \bf{\makecell[l]{Number of  \\ sensors}}  & \bf{\makecell[l]{Measurement \\period}} & \bf{\makecell[l]{Instrument uncertainty \\(Systematic error, \%)}} & \bf{Instrument type} \\
+\midrule
+	Evapotranspiration with Eddy covariance & 33.7 & 1 & Long term & XXX & XXX \\
+	Gloval and diffuse radiation & 40.3 & 1 & Long term & XXX & XXX \\
+	Net radiation & - & 1 & Long term & XXX & XXX \\
+	Relative humidity & 33 & 1 & Long term & XXX & XXX \\
+	Precipitation - open field & 2 & 1 & Long term & XXX & XXX \\
+	Fog frequence (visibility) & 32 & 1 & Jan 2015 - Dec 2015 & XXX & XXX \\
+	-- & N.A. & 1 &  Jan 2019 - Nov 2019 & XXX & XXX \\
+	Sap flow & DBH & 5 spruce trees & Long term & XXX & XXX \\
+	Temperature inside the canopy & 15,23 & 2 & Long term & XXX & XXX \\
+	Humidity inside the canopy & 15,23 & 2 & Long term & XXX & XXX \\
+	Precipitation - below canopy, throughfall & 0.3 & 16 & Jun-Nov 2019 & XXX & XXX \\
+	Precipitation - below canopy, throughfall & 0.3 & 6 & Jun-Nov 2019 & XXX & XXX \\
+	Precipitation - below canopy, stemflow & 0.3 & 2 & Jun-Nov 2020 & XXX & XXX \\
+	Soil water content & \makecell[l]{-0.05, -0.10, -0.20, \\ -0.50, -1.00} & 5 & Long term & XXX & XXX \\
+	Water discharge & 0--2 & 1 & One year (2019) & XXX & XXX \\
+\bottomrule
+\end{tabular*}
+\end{table} 
+\end{landscape}
 
 \paragraph{P}
 
