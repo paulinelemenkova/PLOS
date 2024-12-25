@@ -152,6 +152,14 @@
 % Header and Footer with logo
 \usepackage{lastpage,fancyhdr,graphicx}
 \usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{booktabs} % To thicken table lines
+
 %\pagestyle{myheadings}
 \pagestyle{fancy}
 \fancyhf{}
@@ -245,7 +253,7 @@ Fog can represent an additional source of water, not quantified by the commonly 
 
 Another topic relevant to the understanding of subalpine forest ecohydrology is the evapotranspiration (ET) partitioning between evaporation (E) and transpiration (T). Recently, several models have been developed to partition ET \cite{Nelsonetal2020}, Zhou et al., 2016) and these models have been tested across several climates, plant functional types and sites \cite{Nelsonetal2020}. Alpine forests, however, have their specificity. First, considering that the soil is covered by high vegetation with dense foliage, we can assume that soil evaporation represents a minor source of E as compared to wet canopy E, contrary to what happens, for instance, in sparse broadleaved forests like woody savanna. Secondly, Mountain forests have a specific combination of temperature and precipitation. In some cases, the combination of high precipitation and low temperature is unique, exceeding the combination of T and P depicted by the Whittaker scheme \cite{Testolin}. In a global study by \cite{VANDIJK2015402} the Renon forest, well representing the typical subalpine forest structure, was found to be the site with the highest degree of water intercepted by the canopy, therefore promoting a large fraction of wet canopy E.
 
-There any differences between old and young forest formations in the water interception capacity. Nevertheless, the role of epiphytes in the canopy water retention capacity remains the question in forest ecology. From a forest management perspective, it would be relevant to understand whether young or old forests, growing in this specific habitat conditions, have a higher water retention capacity. Young forests generally achieve quite early a similar leaf area as mature forests, therefore having a similar water-holding capacity. Trunks and branches are however obviously larger in the old forest sections, but spruce and pine cork have limited capacity to hold water. Subalpine forests, however, frequently show an abundant cover of epiphytes, bryophytes and particularly lichens. Previous studies assessed their species composition and their interaction with the climate. However, little is known about their water-holding capacity and hence the extent of their interaction with the water cycle. Due to their poikilohydric nature, they are also expected to behave differently in terms of transpiration, presumably losing water without high water deficit limitation as the trees do. If relevant, this behaviour would affect the ecosystem response to energy partitioning (Porada et al., 2018). The presence of lichens can therefore represent an indirect effect of fog occurrence since it is extremely effective in providing water to these organisms, which can make photosynthesis and develop as a direct function of their water status (XXX).
+There any differences between old and young forest formations in the water interception capacity. Nevertheless, the role of epiphytes in the canopy water retention capacity remains the question in forest ecology. From a forest management perspective, it would be relevant to understand whether young or old forests, growing in this specific habitat conditions, have a higher water retention capacity. Young forests generally achieve quite early a similar leaf area as mature forests, therefore having a similar water-holding capacity. Trunks and branches are however obviously larger in the old forest sections, but spruce and pine cork have limited capacity to hold water. Subalpine forests, however, frequently show an abundant cover of epiphytes, bryophytes and particularly lichens. Previous studies assessed their species composition and their interaction with the climate. However, little is known about their water-holding capacity and hence the extent of their interaction with the water cycle. Due to their poikilohydric nature, they are also expected to behave differently in terms of transpiration, presumably losing water without high water deficit limitation as the trees do. If relevant, this behaviour would affect the ecosystem response to energy partitioning \cite{Poradaetal2018}. The presence of lichens can therefore represent an indirect effect of fog occurrence since it is extremely effective in providing water to these organisms, which can make photosynthesis and develop as a direct function of their water status (XXX).
 
 \subsection{Objectives and goals}
 
@@ -266,7 +274,8 @@ To answer these questions, we complemented a highly instrumented long-term monit
 \subsection{Study area}
 
 The experiment was conducted at the Renon site, South Tyrol, in the Italian Alps (1735 m a.s.l., 46°35′11′′N, 11°26′00′′E). The site, IT-Ren, provides data for several monitoring networks, including Fluxnet \cite{Pastorello}, ICOS (https://www.icos-cp.eu/), and Lter (https://www.lter-europe.net/).  The catchment has an area of 0.44 km2. At the site, it is present a 40 m tall tower where eddy covariance measurements are routinely performed giving the information on evapotranspiration at a half-hour time step. The water basin where the experiment was conducted was measured using the local digital elevation model using ArcGIS software (ESRI, Redlands, CA, USA).
-The soil has developed above a layer of glacial till, with a depth of approximately 1 m, placed on top of a porphyry bedrock. The soil was classified as Haplic Podzol according to the FAO soil taxonomy (FAO, 1998) and on average consisted of 49\% sand, 39\% silt, and 12\% clay.
+
+The soil has developed above a layer of glacial till, with a depth of approximately 1 m, placed on top of a porphyry bedrock. The soil was classified as Haplic Podzol according to the FAO soil taxonomy \cite{FAO} and on average consisted of 49\% sand, 39\% silt, and 12\% clay.
 
 The tree layer (diameter at breast height (DBH) >5 cm) consisted of 85\% spruce (\emph{Picea abies (L) Karst.}), 12\% Swiss stone pine (\emph{Pinus cembra L.}), and 3\% European larch (\emph{Larix europea L.}) trees. Scots pine (\emph{Pinus sylvestris L.}) and European rowan (\emph{Sorbus aucuparia}) individuals were also present sparsely. The dominant tree height was approximately 29 m. The understory consisted mainly of blueberry (\emph{Vaccinium myrtillus L.}). Intervening grasslands were dominated by wavy hair-grass (\emph{Deschampsia flexuosa (L.) Trin}).
 
@@ -393,9 +402,31 @@ Throughfall rates relative to precipitation were higher in the young than in the
 
 We did not capture throughfall during days with fog-only. In subtropical cloud forests with a high frequency of fog, fog-only contributed with only 6\% of throughfall (García-Santos, 2007). This contrasts to the Japanese Alps, Mt. Tateyama, where Uehara and Kume (2012) measured up to 35\% of fog-only contribution in throughfall, attributed to the high wind velocity and humidity in the Japan Alps. The lower contribution in the Alpine forest may be explained by differences in air temperature and altitude. This result is in line with our hypothesis that fog might have a minimal impact on the annual and seasonal water budget. 
 
-By looking at the same water components, split into approximately monthly periods (adjusted to the sampling periods of the manual throughfall gauges), it can be noticed that P increased from June to October, while ET was high until September, but decreased strongly afterwards (Table 1 in Section 1 Supplementary Information). The Tf/P ratio was higher in autumn (September and October) than in summer, except for June in the old stand; correspondingly, the interception rate (I/P) was lower. This should be associated with higher P, but also with more mixed precipitation days observed in autumn. Additionally, stemflow, which was similar for both stands, increased from June to October but was overall too low to play a major role in the water balance.
+By looking at the same water components, split into approximately monthly periods (adjusted to the sampling periods of the manual throughfall gauges), it can be noticed that P increased from June to October, while ET was high until September, but decreased strongly afterwards (Table 1 in Section 1 Supplementary Information). The Tf/P ratio was higher in autumn (September and October) than in summer, except for June in the old stand; correspondingly, the interception rate (I/P) was lower. This should be associated with higher P, but also with more mixed precipitation days observed in autumn. Water components for 5 months were estimated from 2019-5-30 (DOY 150) until 2019-11-07 at canopy level roughly divided into months according to sampling dates of the manual throughfall gauges. Additionally, stemflow, which was similar for both stands, increased from June to October but was overall too low to play a major role in the water balance, Table \ref{tab05}.
 
-By looking at throughfall rates at a daily resolution and separating by precipitation type, we found that throughfall was much higher during days with mixed fog and rain precipitation (Figure 7; Table 5), conversely interception rates (I/P) were lower during rain-only days. This surplus in Tf (Tf/P = 0.28 for the young stand and Tf/P = 0.27 for the old stand), was attributed to fog.
+\begin{table}[h!]
+\caption{Estimated fog contribution to throughfall in mixed precipitation events in the young and old forest stand (mean ± standard deviation for absolute amounts). Fog contribution was estimated daily for all single throughfall gauges and negative estimations were set to zero, thus the sum of estimated fog and rain contribution was higher than measured throughfall}
+\label{tab04}
+\setlength\tabcolsep{0pt}
+\begin{tabularx}{\textwidth}{ p{7cm} p{4cm} p{4cm} }
+\toprule
+\textbf{Days with mixed precipitation} & \textbf{Young forest} & \textbf{Old forest} \\
+\midrule
+	P measured (mm, see Table 3) & 460 ± 35 & 460 ± 35 \\
+	Total Tf measured (mm) &  292 ± 26 & 216 ± 11 \\
+	Tf estimated from rain only events (mm) & 243 ± 7 & 184 ± 8 \\
+	Fog contribution in mixed events (mm) & 70 ± 15 & 53 ± 5 \\
+	
+	Measured Tf/P (\%) & 64 & 47 \\
+	Estimated rain-only Tf/P (\%) & 53 & 40 \\
+	Estimated fog Tf/P (\%) & 15 & 12 \\
+	Rain contribution to Tf (\%) & 83 & 84 \\
+	Fog contribution to Tf (\%) & 24 & 24 \\
+\bottomrule
+\end{tabularx}
+\end{table} 
+
+By looking at throughfall rates at a daily resolution and separating by precipitation type, we found that throughfall was much higher during days with mixed fog and rain precipitation (Figure 7; Table \ref{tab05}), conversely interception rates (I/P) were lower during rain-only days. This surplus in Tf (Tf/P = 0.28 for the young stand and Tf/P = 0.27 for the old stand), was attributed to fog.
 
 \begin{figure}[!h]
     \begin{center}
@@ -409,7 +440,22 @@ A higher proportion of Tf during days with mixed precipitation has also been obs
 
 \subsubsection{Water storage capacity of lichens}
 
-To characterize the growing conditions for lichens, we measured some meteorological variables inside the forest. As expected, the relative humidity was higher within the forest, especially at 15 m, where VPD was lowest (Table 6). Surprisingly, the temperature was not significantly different outside and inside the canopy. The highest temperature and consequently highest VPD was measured at 23 m but the differences were within the error range. Standard deviations were high, as they were calculated over time, thus included daily and seasonal variability, and were the highest within the canopy at 23 m (Table 6). Therefore, the presence of lichens is likely more related to humidity than to temperature. 
+To characterize the growing conditions for lichens, we measured some meteorological variables inside the forest. As expected, the relative humidity was higher within the forest, especially at 15 m, where VPD was lowest (Table 6). Surprisingly, the temperature was not significantly different outside and inside the canopy. The highest temperature and consequently highest VPD was measured at 23 m but the differences were within the error range. Standard deviations were high, as they were calculated over time, thus included daily and seasonal variability, and were the highest within the canopy at 23 m (Table \ref{tab06}). Therefore, the presence of lichens is likely more related to humidity than to temperature. 
+
+\begin{table}[h!]
+\caption{Average air temperature (T), air relative humidity (RH), and vapor pressure deficit (VPD) from 30 min data outside and at two heights inside the canopy for the measuring period (15 m and 23 m at the top of the canopy) during the measuring period from 25.5. to 7.11.2019.}
+\label{tab06}
+\setlength\tabcolsep{0pt}
+\begin{tabularx}{\textwidth}{ p{4cm} p{3cm} p{3cm}  p{3cm} }
+\toprule
+\textbf{Sensor position} & \textbf{T (°C)} & \textbf{RH (\%)} & \textbf{VPD (hPa)} \\
+\midrule
+	Outside & 11.0 ± 4.8 & 77.5 ± 16.6 & 3.5 ± 3.3\\
+	15 m & 11.5 ± 5.3 & 89.1 ± 14.2 & 2.0 ± 3.3\\
+	23 m & 12.4 ± 6.2 & 82.7 ± 17.5 & 3.6 ± 5.1\\
+\bottomrule
+\end{tabularx}
+\end{table} 
 
 The abundance of lichens in the old but not in the young stand could be a major reason for lower throughfall rates indicating a higher interception capacity in the old stand, even though LAI was similar in both stands. Due to their protected status, we did not conduct a systematic survey on lichens, but we collected them from one fallen tree representative of the old forest. This tree held 7.26 kg of dry lichens; 0.71 kg (10\%) of them were located on the trunk and the rest on the branches with the highest concentration located at 22 m above the soil (at approximately 3/4 of the tree height). Once rewetted, the lichens reached a fresh weight of 19.63 kg, thereby holding 12.37 kg of water; however, they lost 2/3 of that water again within two days when air-dried. 
 
@@ -427,11 +473,21 @@ When accounting for the interception, tree transpiration contributed slightly le
 
 Discharge (DC) and the change in soil moisture (dSWC) completed the water balance; as both were only measured for the entire forest, the same values were used for both forest types. Both DC and dSWC were of minor importance compared to T and Esu (Fig. \ref{fig08}). Most of the discharge occurred during snowmelt in spring before the start of the measurement period. Changes in soil moisture are important in water balance computation only at short time scales and had nearly levelled out over the entire measuring period. 
 
-\begin{figure}[!h]
-    \begin{center}
-	\hspace{-25pt}\includegraphics[width=12.0cm]{Fig_08a.jpg}
-    \end{center}
-\caption{{\bf Water partitioning for the young forest (left) and the old forest (right) for the 5 months measuring period from 2019-5-30 until 2019-11-07. Total precipitation was split into rainfall (P), mixed precipitation (Mixed fog + P) according to fog observations.  Interception (I) was calculated as the residual of measured P + mixed fog+P - throughfall (Tf) - stemflow (Sf). Evapotranspiration of soil and understory (Esu) was calculated as the residual of evapotranspiration (ET) measured with eddy covariance for the whole forest minus interception (I) and tree transpiration (T) measured as sap flow. Discharge (DC) and change of soil moisture (dSWC) were also measured for the whole forest, deep percolation was not quantified for the measuring period as ET + DC + dSWC was greater than total precipitation}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=6.0cm]{Fig_08a.jpg}
+  \caption{}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=6.0cm]{Fig_08b.jpg}
+  \caption{}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Water partitioning for the young forest (left) and the old forest (right) for the 5 months measuring period from 2019-5-30 until 2019-11-07. Total precipitation was split into rainfall (P), mixed precipitation (Mixed fog + P) according to fog observations.  Interception (I) was calculated as the residual of measured P + mixed fog+P - throughfall (Tf) - stemflow (Sf). Evapotranspiration of soil and understory (Esu) was calculated as the residual of evapotranspiration (ET) measured with eddy covariance for the whole forest minus interception (I) and tree transpiration (T) measured as sap flow. Discharge (DC) and change of soil moisture (dSWC) were also measured for the whole forest, deep percolation was not quantified for the measuring period as ET + DC + dSWC was greater than total precipitation}
 \label{fig08}
 \end{figure}
 
